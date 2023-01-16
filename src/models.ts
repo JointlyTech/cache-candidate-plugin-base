@@ -1,7 +1,7 @@
 export type PluginPayload = {
   options: any;
   key: string;
-  keepAliveTimeoutCache: any;
+  timeFrameTimeoutCache: any;
   runningQueryCache: any;
   timeframeCache: any;
   fnArgs: any[];
