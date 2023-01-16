@@ -1,6 +1,6 @@
 # What is this?
 
-This is a plugin for [cache-candidate](https://github.com/JointlyTech/cache-candidate) that provides types needed to create a cache-candidate plugin.
+This is a plugin for [@jointly/cache-candidate](https://github.com/JointlyTech/cache-candidate) that provides types needed to create a cache-candidate plugin.
 
 
 ## How To Create a Plugin
