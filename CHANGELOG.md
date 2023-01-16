@@ -1,3 +1,14 @@
+#### 1.0.1 (2023-01-16)
+
+##### Chores
+
+*  fixed type to respect new cache-candidate naming ([d9d29ffa](https://github.com/JointlyTech/cache-candidate-plugin-base/commit/d9d29ffa9668d9f90dfe407137bff2b15bec1eba))
+*  fixed license ([26255d62](https://github.com/JointlyTech/cache-candidate-plugin-base/commit/26255d62925f62b5e89a8a6efda7c2145dcc37fc))
+
+##### Documentation Changes
+
+*  fixed cache-candidate library name ([1c0e959a](https://github.com/JointlyTech/cache-candidate-plugin-base/commit/1c0e959a0f4a10578a6ff1c3f2a5ce23d4252682))
+
 ## 1.0.0 (2023-01-16)
 
 ##### Chores
