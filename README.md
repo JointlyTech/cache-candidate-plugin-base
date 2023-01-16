@@ -1,74 +1,66 @@
 # What is this?
 
-A simple scaffolding tool for creating a new project to be published to npm.  
-It provides a build command that will compile your code to a CommonJS Node 14.16 target, allowing named imports for CommonJS packages inside ESM files.  
-The package contains a simple "hello world" based on TypeScript, built on esbuild, tested through Jest and linted with ESLint and Prettier.  
-It also provides a Husky pre-commit hook to run some linting based on prettier and eslint and run tests, so you can simple `git add` and `git commit` without worrying about anything else.
+This is a plugin for [cache-candidate](https://github.com/JointlyTech/cache-candidate) that provides types needed to create a cache-candidate plugin.
 
-## How To Install?
 
-```bash
-git clone git://github.com/Cadienvan/npm-package-ts-scaffolding.git package_name
-cd package_name
-npm install
-npx husky install
+## How To Create a Plugin
+
+To create a plugin, you have to declare a variable of type `CacheCandidatePlugin`.  
+This variable must be exported, so that the plugin can be loaded by cache-candidate.
+
+```ts
+import { CacheCandidatePlugin } from '@jointly/cache-candidate-plugin-base';
+
+export const myPlugin: CacheCandidatePlugin = {
+  // ...
+};
 ```
 
-## What do you mean by `allowing named imports from CommonJS`?
+The `CacheCandidatePlugin` is a type expecting an object composed of the following properties:
+- `name`: The name of the plugin. This name will be used to identify the plugin in the logs.
+- `hooks`: An array of `ActionableHook` that will be executed by cache-candidate.  
+  See [Hooks](#ActionableHook) for more information.
 
-If you try to run `npm run build` you will be able to import the `sayHello` function from the `index.js` file, both via `require` and `import` syntax.
+  ## Glossary
 
-### Importing via `require`
+### Hooks
 
-```js
-const { sayHello } = require('my-package');
-```
+#### ActionableHook
 
-### Importing via `import`
+An ActionableHook is a hook that can be executed by cache-candidate.  
+It is composed of the following properties:
+- `hook`: The hook to execute.  
+  See [Hooks](#AvailableHooks) for more information about the available hooks.
+- `action`: The action to execute when the hook is triggered.  
+  See [Actions](#Actions) for more information about the available actions.
 
-```js
-import { sayHello } from 'my-package';
-```
+#### AvailableHooks
 
-# Why did you build it?
+The following hooks are available:
+- `INIT`: Triggered when the cache candidate is starting.  
+- `EXECUTION_PRE`: Triggered before the execution of the function/method wrapped in the cache-candidate.  
+- `EXECUTION_POST`: Triggered after the execution of the function/method wrapped in the cache-candidate.
+- `DATACACHE_RECORD_ADD_PRE`: Triggered before the addition of a record in the data cache.  
+- `DATACACHE_RECORD_ADD_POST`: Triggered after the addition of a record in the data cache.
+- `DATACACHE_RECORD_DELETE_PRE`: Triggered before the deletion of a record in the data cache.  
+- `DATACACHE_RECORD_DELETE_POST`: Triggered after the deletion of a record in the data cache.
+- `CACHE_HIT`: Triggered when a cache hit occurs.
 
-I got tired of copying and pasting the same files over and over again.  
-This is a simple tool to create a new project with the basic files needed to publish to npm.
+#### Actions
 
-# How can I personalize it?
+Actions are functions that are executed by the cache-candidate when a hook is triggered.    
+Please, refer to the [cache-candidate docs](https://github.com/JointlyTech/cache-candidate/blob/main/README.md) for more information about the arguments and their properties.  
+They take two arguments:
+- `payload`: The payload of the hook. It is composed of the following properties:
+  - `options`: The options of the cache-candidate.
+  - `key`: The key of the function/method wrapped in the cache-candidate.
+  - `keepAliveTimeoutCache`: The keep-alive timeout cache of the cache-candidate.
+  - `runningQueryCache`: The running query cache of the cache-candidate.
+  - `timeframeCache`: The timeframe cache of the cache-candidate.
+  - `fnArgs`: The arguments of the function/method wrapped in the cache-candidate.  
+  - `result`(only for `EXECUTION_POST` and `CACHE_HIT`): The result of the function/method wrapped in the cache-candidate.
 
-You can change the `package.json` file to your liking, bringing your own package name and description.  
-Please, remember to give me a star if you like the project!
 
-# What's Inside?
+# ToDo
 
-- Typescript
-- Jest
-- Eslint
-- Prettier
-- Husky
-- Esbuild
-- Commitlint
-
-# How to push and release an update?
-
-```bash
-git add --all
-git commit -m "chore: update package"
-npm run release:patch
-```
-
-Remember to follow the [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/) standard.
-You can substitute `patch` with `minor` or `major` to update the version accordingly.
-
-# How to run tests?
-
-```bash
-npm test
-```
-
-# Contributing
-
-If you want to contribute to this project, please open an issue or a pull request.  
-I will be happy to review it and merge it if it's useful.  
-Please, remember to follow the [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/) standard.  
+- [ ] Specify available cache-candidate documentation paragraphs by linking to the cache-candidate when open-sourced and README ready.
