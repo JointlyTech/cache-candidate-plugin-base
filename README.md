@@ -78,7 +78,7 @@ export const myPlugin: CacheCandidatePlugin = {
 ```
 
 In the example above, we created a plugin named `myPlugin` that logs the payload of each hook.  
-The `additionalParameters` argument is an object that can be passed to the cache-candidate when loading the plugin.  
+The `additionalParameters` argument is an object that can be passed to the cache-candidate when calling its hooks.  
 
 ```ts
 import { cacheCandidate } from '@jointly/cache-candidate';
@@ -127,11 +127,11 @@ The `CacheCandidatePlugin` is an object composed of the following properties:
 An ActionableHook is a hook associated with an action that can be executed by cache-candidate.  
 It is composed of the following properties:
 - `hook`: The hook to execute.  
-  See [Hooks](#AvailableHooks) for more information about the available hooks.
+  See [Available Hooks](#available-hooks) for more information about the available hooks.
 - `action`: The action to execute when the hook is triggered.  
   See [Actions](#Actions) for more information about the available actions.
 
-#### AvailableHooks
+#### Available Hooks
 
 All hooks are called only when the cache-candidate is executed in runtime.  
 The following hooks are available:
@@ -158,3 +158,5 @@ They take two arguments:
   - `timeframeCache`: The timeframe cache of the cache-candidate.
   - `fnArgs`: The arguments of the function/method wrapped in the cache-candidate.  
   - `result` (only for `EXECUTION_POST` and `CACHE_HIT`): The result of the function/method wrapped in the cache-candidate.
+- `additionalParameters`: The additional parameters passed to the plugin when calling its hooks.  
+  These parameters can be of any type and are used to pass additional information to the plugin.
