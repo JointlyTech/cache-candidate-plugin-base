@@ -1,3 +1,10 @@
+#### 1.0.2 (2023-01-18)
+
+##### Documentation Changes
+
+*  added missing additional parameters ([a642260c](https://github.com/JointlyTech/cache-candidate-plugin-base/commit/a642260c23c6a1951e5331c5a454402e8d8e5068))
+*  improved docs ([1cf6d6b6](https://github.com/JointlyTech/cache-candidate-plugin-base/commit/1cf6d6b60835ebc32f3de6ff698145ec9af8d953))
+
 #### 1.0.1 (2023-01-16)
 
 ##### Chores
