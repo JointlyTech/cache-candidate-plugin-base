@@ -1,3 +1,9 @@
+### 1.1.0 (2023-01-27)
+
+##### Chores
+
+*  internal name refactor ([c1aee1a5](https://github.com/JointlyTech/cache-candidate-plugin-base/commit/c1aee1a509496368e61d50ea67f553a237a3e920))
+
 #### 1.0.2 (2023-01-18)
 
 ##### Documentation Changes
