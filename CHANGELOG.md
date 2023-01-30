@@ -1,3 +1,14 @@
+#### 1.2.3 (2023-01-30)
+
+##### Chores
+
+*  better internal types ([8dbf1e34](https://github.com/JointlyTech/cache-candidate-plugin-base/commit/8dbf1e34e8fad29b915b71c1d2e6b53cf13f0d78))
+*  linting ([da8e2739](https://github.com/JointlyTech/cache-candidate-plugin-base/commit/da8e27394d1578a123afe4844dc88a61ffb586bf))
+
+##### Documentation Changes
+
+*  changed internals order for better clearance ([34a09635](https://github.com/JointlyTech/cache-candidate-plugin-base/commit/34a09635f0f00d540efffaea395497a56079f7bc))
+
 #### 1.2.2 (2023-01-30)
 
 ##### Documentation Changes
