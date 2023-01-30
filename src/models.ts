@@ -5,6 +5,9 @@ export type PluginPayload = {
   runningQueryCache: any;
   timeframeCache: any;
   fnArgs: any[];
+  internals?: {
+    [key: string]: any;
+  }
   result?: any;
 };
 
