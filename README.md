@@ -18,6 +18,13 @@ export const myPlugin: CacheCandidatePlugin = {
   name: 'myPlugin',
   hooks: [
     {
+      hook: Hooks.SETUP,
+      action: async (payload, additionalParameters) => {
+        // Do something
+        console.log('Hooks.SETUP', payload, additionalParameters);
+      }
+    },
+    {
       hook: Hooks.INIT,
       action: async (payload, additionalParameters) => {
         // Do something
@@ -154,11 +161,11 @@ Please, refer to the [cache-candidate docs](https://github.com/JointlyTech/cache
 They take two arguments:
 - `payload`: The payload of the hook. It is composed of the following properties:
   - `options`: The options of the cache-candidate.
-  - `key`: The key of the function/method wrapped in the cache-candidate.
+  - `key`: The key of the function/method wrapped in the cache-candidate. In case of `SETUP`, the key is an empty string `""`.
   - `keepAliveTimeoutCache`: The keep-alive timeout cache of the cache-candidate.
   - `runningQueryCache`: The running query cache of the cache-candidate.
   - `timeframeCache`: The timeframe cache of the cache-candidate.
-  - `fnArgs`: The arguments of the function/method wrapped in the cache-candidate.  
+  - `fnArgs`: The arguments of the function/method wrapped in the cache-candidate. In case of `SETUP`, the arguments are an empty array `[]`.  
   - `result` (only for `EXECUTION_POST` and `CACHE_HIT`): The result of the function/method wrapped in the cache-candidate.
 - `additionalParameters`: The additional parameters passed to the plugin when calling its hooks.  
   These parameters can be of any type and are used to pass additional information to the plugin.
