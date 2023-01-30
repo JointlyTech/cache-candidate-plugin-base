@@ -168,6 +168,18 @@ They take two arguments:
   - `runningQueryCache`: The running query cache of the cache-candidate.
   - `timeframeCache`: The timeframe cache of the cache-candidate.
   - `fnArgs`: The arguments of the function/method wrapped in the cache-candidate. In case of `SETUP`, the arguments are an empty array `[]`.  
+  - `internals`: Internal functions and objects of the cache-candidate.  
+    These functions and objects are not meant to be directly modified by the plugins.  
+    They are exposed to the plugins for execution purposes.  
+    Internal functions are instantiated only once, therefore modifying them will affect all the cache-candidate instances.  
+    Please, refer to the [@jointly/cache-candidate](https://github.com/JointlyTech/cache-candidate) source code for additional information about the internals.  
+    The following internal functions are available:
+    - `deleteDataCacheRecord`: A function that deletes a record from the data cache.  
+    - `addDataCacheRecord`: A function that adds a record to the data cache.
+    - `getDataCacheRecord`: A function that gets a record from the data cache.
+    - `isDataCacheRecordExpired`: A function that checks if a record is expired.
+    - `getDataCacheKey`: A function that gets the key of a record in the data cache.
+    - `getExceedingAmount`: A function that gets the exceeding amount of a record in the data cache.
   - `result` (only for `EXECUTION_POST` and `CACHE_HIT`): The result of the function/method wrapped in the cache-candidate.
 - `additionalParameters`: The additional parameters passed to the plugin when calling its hooks.  
   These parameters can be of any type and are used to pass additional information to the plugin.
