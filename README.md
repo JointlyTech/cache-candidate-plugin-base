@@ -143,7 +143,9 @@ It is composed of the following properties:
 All hooks are called only when the cache-candidate is executed in runtime.  
 The following hooks are available:
 - `SETUP`: Triggered when the cache-candidate firstly wraps the function/method.  
-  This gets called before any other operation is done.
+  This gets called before any other operation is done.  
+  Please, consider the library will not wait for the execution of this hook.  
+  This is done to avoid blocking the execution of the initial execution.  
 - `INIT`: Triggered when the candidate process is initialized.  
   This gets called before any other operation is done, but only when the function is called.
 - `EXECUTION_PRE`: Triggered before the execution of the function/method wrapped in the cache-candidate.  
