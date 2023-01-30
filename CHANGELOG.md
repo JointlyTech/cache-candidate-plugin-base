@@ -1,3 +1,9 @@
+#### 1.2.4 (2023-01-30)
+
+##### New Features
+
+*  reverting internals ([c63b9b3a](https://github.com/JointlyTech/cache-candidate-plugin-base/commit/c63b9b3aa321fc40b648890cf4759e11e3aff7fb))
+
 #### 1.2.3 (2023-01-30)
 
 ##### Chores
