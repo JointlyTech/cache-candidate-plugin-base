@@ -1,3 +1,13 @@
+### 1.2.0 (2023-01-30)
+
+##### Documentation Changes
+
+*  added SETUP to the list of hooks ([f82624c5](https://github.com/JointlyTech/cache-candidate-plugin-base/commit/f82624c5a7f9ad3ad4971bdc005dc80b9625fa7d))
+
+##### New Features
+
+*  added SETUP hook ([706f2e09](https://github.com/JointlyTech/cache-candidate-plugin-base/commit/706f2e098d3668120b9190d2f6aeda82f6345ec6))
+
 ### 1.1.0 (2023-01-27)
 
 ##### Chores
