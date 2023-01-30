@@ -2,7 +2,7 @@
   "name": "@jointly/cache-candidate-plugin-base",
   "description": "This is a library providing types needed to create a plugin for cache-candidate.",
   "private": false,
-  "version": "1.2.2",
+  "version": "1.2.3",
   "main": "dist/index.js",
   "module": "dist/index.js",
   "types": "dist/index.d.ts",
