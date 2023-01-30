@@ -135,8 +135,10 @@ It is composed of the following properties:
 
 All hooks are called only when the cache-candidate is executed in runtime.  
 The following hooks are available:
-- `INIT`: Triggered when the candidate process is initialized.  
+- `SETUP`: Triggered when the cache-candidate firstly wraps the function/method.  
   This gets called before any other operation is done.
+- `INIT`: Triggered when the candidate process is initialized.  
+  This gets called before any other operation is done, but only when the function is called.
 - `EXECUTION_PRE`: Triggered before the execution of the function/method wrapped in the cache-candidate.  
 - `EXECUTION_POST`: Triggered after the execution of the function/method wrapped in the cache-candidate.
 - `DATACACHE_RECORD_ADD_PRE`: Triggered before the addition of a record in the cache.  
