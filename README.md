@@ -174,9 +174,9 @@ They take two arguments:
     Internal functions are instantiated only once, therefore modifying them will affect all the cache-candidate instances.  
     Please, refer to the [@jointly/cache-candidate](https://github.com/JointlyTech/cache-candidate) source code for additional information about the internals.  
     The following internal functions are available:
-    - `deleteDataCacheRecord`: A function that deletes a record from the data cache.  
-    - `addDataCacheRecord`: A function that adds a record to the data cache.
     - `getDataCacheRecord`: A function that gets a record from the data cache.
+    - `addDataCacheRecord`: A function that adds a record to the data cache.
+    - `deleteDataCacheRecord`: A function that deletes a record from the data cache.  
     - `isDataCacheRecordExpired`: A function that checks if a record is expired.
     - `getDataCacheKey`: A function that gets the key of a record in the data cache.
     - `getExceedingAmount`: A function that gets the exceeding amount of a record in the data cache.
