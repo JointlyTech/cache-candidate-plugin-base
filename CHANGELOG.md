@@ -1,3 +1,13 @@
+#### 1.2.2 (2023-01-30)
+
+##### Documentation Changes
+
+*  updated documentation to accomodate internals ([7d51526d](https://github.com/JointlyTech/cache-candidate-plugin-base/commit/7d51526df52a62b1b104c46a7e8aa2a6d82391d0))
+
+##### New Features
+
+*  allowing internal functions and objects to be exposed by the cache-candidate ([990cd138](https://github.com/JointlyTech/cache-candidate-plugin-base/commit/990cd1380a9b7865b87544c1ca4c9790e4745c75))
+
 #### 1.2.1 (2023-01-30)
 
 ##### Documentation Changes
