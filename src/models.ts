@@ -7,7 +7,7 @@ export type PluginPayload = {
   fnArgs: any[];
   internals?: {
     [key: string]: any;
-  }
+  };
   result?: any;
 };
 
