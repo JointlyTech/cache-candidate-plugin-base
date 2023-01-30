@@ -9,6 +9,7 @@ export type PluginPayload = {
 };
 
 export enum Hooks {
+  SETUP = 'SETUP',
   INIT = 'INIT',
   EXECUTION_PRE = 'EXECUTION_PRE',
   EXECUTION_POST = 'EXECUTION_POST',
