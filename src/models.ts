@@ -6,6 +6,58 @@ export type PluginPayload = {
   timeframeCache: any;
   fnArgs: any[];
   result?: any;
+  internals?: {
+    getDataCacheRecord: ({
+      options,
+      key,
+      HookPayload
+    }: {
+      options: any;
+      key: string;
+      HookPayload: PluginPayload;
+    }) => Promise<any>;
+    addDataCacheRecord: ({
+      options,
+      key,
+      result,
+      HookPayload
+    }: {
+      options: any;
+      key: string;
+      result: unknown;
+      HookPayload: PluginPayload;
+    }) => Promise<void>;
+    deleteDataCacheRecord: ({
+      options,
+      key,
+      HookPayload
+    }: {
+      options: any;
+      key: string;
+      HookPayload: PluginPayload;
+    }) => Promise<void>;
+    isDataCacheRecordExpired: ({
+      birthTime,
+      options
+    }: {
+      birthTime: number;
+      options: any;
+    }) => boolean;
+    getDataCacheKey: (...args: any[]) => string;
+    getExceedingAmount: ({
+      options,
+      key,
+      timeframeCache,
+      executionTime,
+      args
+    }: {
+      options: any;
+      key: string;
+      timeframeCache: any;
+      executionTime: number;
+      args: any[];
+    }) => number;
+  };
 };
 
 export enum Hooks {
