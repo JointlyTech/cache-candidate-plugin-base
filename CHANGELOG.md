@@ -1,3 +1,9 @@
+#### 1.2.5 (2023-01-31)
+
+##### New Features
+
+*  bringing internals back again ([f2cd9585](https://github.com/JointlyTech/cache-candidate-plugin-base/commit/f2cd95855a50e04f1aca4d3eeaa302c0ca9b4baa))
+
 #### 1.2.4 (2023-01-30)
 
 ##### New Features
