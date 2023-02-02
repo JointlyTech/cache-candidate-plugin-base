@@ -56,7 +56,7 @@ export type PluginPayload = {
       timeframeCache: any;
       executionTime: number;
       args: any[];
-    }) => number;
+    }) => Promise<number>;
   };
 };
 
