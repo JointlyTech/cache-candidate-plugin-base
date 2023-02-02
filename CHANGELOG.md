@@ -1,3 +1,13 @@
+#### 1.2.6 (2023-02-02)
+
+##### Chores
+
+*  allowing getExceedingAmount to be async as needed in cache-candidate v1.5.1 ([6aff4c1d](https://github.com/JointlyTech/cache-candidate-plugin-base/commit/6aff4c1d1cfeaf45835e61dc8baef3dd97ab70ff))
+
+##### Documentation Changes
+
+*  aligned documentation with getExceedingAmount new behaviour ([0ac22251](https://github.com/JointlyTech/cache-candidate-plugin-base/commit/0ac22251415dc2ad43d127729609140855b632c7))
+
 #### 1.2.5 (2023-01-31)
 
 ##### New Features
