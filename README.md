@@ -179,7 +179,8 @@ They take two arguments:
     - `deleteDataCacheRecord`: A function that deletes a record from the data cache.  
     - `isDataCacheRecordExpired`: A function that checks if a record is expired.
     - `getDataCacheKey`: A function that gets the key of a record in the data cache.
-    - `getExceedingAmount`: A function that gets the exceeding amount of a record in the data cache.
+    - `getExceedingAmount`: A function that gets the exceeding amount of a record in the data cache.  
+      * As of cache-candidate v1.5.1, this function will expose a Promise instead of a number.
   - `result` (only for `EXECUTION_POST` and `CACHE_HIT`): The result of the function/method wrapped in the cache-candidate.
 - `additionalParameters`: The additional parameters passed to the plugin when calling its hooks.  
   These parameters can be of any type and are used to pass additional information to the plugin.
