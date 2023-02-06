@@ -164,7 +164,7 @@ They take two arguments:
 - `payload`: The payload of the hook. It is composed of the following properties:
   - `options`: The options of the cache-candidate.
   - `key`: The key of the function/method wrapped in the cache-candidate. In case of `SETUP`, the key is an empty string `""`.
-  - `keepAliveTimeoutCache`: The keep-alive timeout cache of the cache-candidate.
+  - `timeoutCache`: The map containing the *timeout bombs* of the cache-candidate.
   - `runningQueryCache`: The running query cache of the cache-candidate.
   - `timeframeCache`: The timeframe cache of the cache-candidate.
   - `fnArgs`: The arguments of the function/method wrapped in the cache-candidate. In case of `SETUP`, the arguments are an empty array `[]`.  
