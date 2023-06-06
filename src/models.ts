@@ -10,11 +10,13 @@ export type PluginPayload = {
     getDataCacheRecord: ({
       options,
       key,
-      HookPayload
+      HookPayload,
+      staleMap
     }: {
       options: any;
       key: string;
       HookPayload: PluginPayload;
+      staleMap: StaleMap;
     }) => Promise<any>;
     addDataCacheRecord: ({
       options,
@@ -30,11 +32,15 @@ export type PluginPayload = {
     deleteDataCacheRecord: ({
       options,
       key,
-      HookPayload
+      HookPayload,
+      result,
+      staleMap
     }: {
       options: any;
       key: string;
       HookPayload: PluginPayload;
+      result: unknown;
+      staleMap: StaleMap;
     }) => Promise<void>;
     isDataCacheRecordExpired: ({
       birthTime,
@@ -91,3 +97,5 @@ export type CacheCandidatePluginAdditionalParameters = {
 
 export type CacheCandidatePluginWithAdditionalParameters =
   CacheCandidatePlugin & CacheCandidatePluginAdditionalParameters;
+
+export type StaleMap = Map<string, unknown>; // Inherited from cache-candidate
