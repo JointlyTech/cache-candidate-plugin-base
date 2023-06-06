@@ -1,3 +1,5 @@
+**If you are creating a plugin for *@jointly/cache-candidate* prior to v2.0.0, please refer to [v1.2.6](https://github.com/JointlyTech/cache-candidate-plugin-base/releases/tag/v1.2.6).**
+
 # What is this?
 
 This is a basic repository for [@jointly/cache-candidate](https://github.com/JointlyTech/cache-candidate) that provides types needed to create a cache-candidate plugin.  
