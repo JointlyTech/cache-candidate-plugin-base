@@ -1,3 +1,13 @@
+## 2.0.0 (2023-06-06)
+
+##### Documentation Changes
+
+*  fixing mismatching payload option name ([cefe2d49](https://github.com/JointlyTech/cache-candidate-plugin-base/commit/cefe2d49163733db57a203ef94a55f4161ddafca))
+
+##### New Features
+
+*  adding StaleMap for v2 release of cache-candidate compatibility ([053fd97b](https://github.com/JointlyTech/cache-candidate-plugin-base/commit/053fd97ba38074b589662a9c5531b39bb165a4e8))
+
 #### 1.2.6 (2023-02-02)
 
 ##### Chores
