@@ -1,5 +1,15 @@
 #### 2.1.1 (2025-10-08)
 
+##### Chores
+
+*  removing misconfigured eslint ([75836960](https://github.com/JointlyTech/cache-candidate-plugin-base/commit/75836960e22930d8c39ff6e6a02ba97c558ca563))
+
+##### Documentation Changes
+
+*  updated changelog ([9a1acc0e](https://github.com/JointlyTech/cache-candidate-plugin-base/commit/9a1acc0e0ee5b6bb7ab3060b41071787829405de))
+
+#### 2.1.1 (2025-10-08)
+
 ### 2.1.0 (2025-10-08)
 
 ##### Documentation Changes
