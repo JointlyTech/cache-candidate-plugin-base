@@ -1,3 +1,13 @@
+### 2.1.0 (2025-10-08)
+
+##### Documentation Changes
+
+*  Update README.md ([ebbad8f7](https://github.com/JointlyTech/cache-candidate-plugin-base/commit/ebbad8f7a55027800817cc637bd6f018b30c158b))
+
+##### New Features
+
+*  adding forceDeleteFn to deleteDataCacheRecord ([05130170](https://github.com/JointlyTech/cache-candidate-plugin-base/commit/0513017068cc2bba4fd431adcb5ace59fc77c505))
+
 ## 2.0.0 (2023-06-06)
 
 ##### Documentation Changes
