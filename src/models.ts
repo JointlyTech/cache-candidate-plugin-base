@@ -34,13 +34,15 @@ export type PluginPayload = {
       key,
       HookPayload,
       result,
-      staleMap
+      staleMap,
+      forceDeleteFn
     }: {
       options: any;
       key: string;
       HookPayload: PluginPayload;
       result: unknown;
       staleMap: StaleMap;
+      forceDeleteFn?: boolean;
     }) => Promise<void>;
     isDataCacheRecordExpired: ({
       birthTime,
