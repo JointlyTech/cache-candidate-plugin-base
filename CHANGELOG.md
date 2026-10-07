@@ -1,3 +1,9 @@
+#### 2.1.2 (2026-10-07)
+
+##### Chores
+
+* **MUF-10757:**  update dependencies (minor/patch) ([#4](https://github.com/JointlyTech/cache-candidate-plugin-base/pull/4)) ([db79930a](https://github.com/JointlyTech/cache-candidate-plugin-base/commit/db79930ad4641036c872c172859f3faeaa11b93a))
+
 #### 2.1.1 (2025-10-08)
 
 ##### Chores
